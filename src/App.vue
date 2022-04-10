@@ -1,26 +1,40 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <HelloWorld />
+  <Person />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import HelloWorld from "./components/HelloWorld.vue";
+import Person from "./components/Person.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    HelloWorld,
+    Person,
+  },
+};
 </script>
 
 <style lang="scss">
+@font-face {
+  font-family: "LabGrotesque-Reg";
+  font-weight: 400;
+  src: url("~@/assets/fonts/LabGrotesque-Regular.woff2") format("woff2"),
+    url("~@/assets/fonts/LabGrotesque-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "LabGrotesque-Bold";
+  font-weight: 700;
+  src: url("~@/assets/fonts/LabGrotesque-Bold.woff2") format("woff2"),
+    url("~@/assets/fonts/LabGrotesque-Bold.woff") format("woff");
+}
+body {
+  margin: 0;
+}
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  display: flex;
+  justify-content: flex-end;
 }
 </style>
