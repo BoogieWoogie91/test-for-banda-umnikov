@@ -30,7 +30,6 @@ export default {
     }
     img.addEventListener("load", () => {
       error = false;
-      console.log(this);
     });
     img.addEventListener("error", () => {
       setTimeout(() => {
